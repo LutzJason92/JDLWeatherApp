@@ -50,9 +50,9 @@ WHEN I click on a city in the search history
 ```md
 You are required to submit the following for review:
 
-[ ] The URL of the deployed application
-![DeployedPage](https://lutzjason92.github.io/JDLWeatherApp/)
+[x] The URL of the deployed application
+[DeployedPage](https://lutzjason92.github.io/JDLWeatherApp/)
 
-[ ] The URL of the GitHub repository, with a unique name and a README describing the project
-![GitHubRepo](https://github.com/LutzJason92/JDLWeatherApp)
+[x] The URL of the GitHub repository, with a unique name and a README describing the project
+[GitHubRepo](https://github.com/LutzJason92/JDLWeatherApp)
 ```

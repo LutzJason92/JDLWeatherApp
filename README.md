@@ -1,10 +1,6 @@
 # JDLWeatherApp
 
-###A weather application dashboard which displays data pooled from a weather API
-
-## Mock-Up
-
-![Screen Shot](./assets/images/WeatherApp-BoxModel-OutLine.jpg)
+### A weather application dashboard which displays data pooled from a weather API
 
 ## TASK
 
@@ -14,7 +10,7 @@ Use the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) 
 
 ## User Story
 
-```
+```md
 AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
@@ -22,7 +18,7 @@ SO THAT I can plan a trip accordingly
 
 ## Acceptance Criteria
 
-```
+```md
 GIVEN a weather dashboard with form inputs
 
 WHEN I search for a city
@@ -41,18 +37,22 @@ WHEN I click on a city in the search history
 [ ]THEN I am again presented with current and future conditions for that city
 ```
 
+## Mock-Up
+
+![Screen Shot](./assets/images/WeatherApp-BoxModel-OutLine.jpg)
+
 ## Image of Application
 
 ![placeholder]()
 
 ## Review
 
-```
+```md
 You are required to submit the following for review:
 
 [ ] The URL of the deployed application
-![DeployedPage]()
+![DeployedPage](https://lutzjason92.github.io/JDLWeatherApp/)
 
 [ ] The URL of the GitHub repository, with a unique name and a README describing the project
-![GitHubRepo]()
+![GitHubRepo](https://github.com/LutzJason92/JDLWeatherApp)
 ```

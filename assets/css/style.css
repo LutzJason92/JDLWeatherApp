@@ -1,13 +1,22 @@
 body {
   background-color: rgb(149, 149, 255);
 }
+.navbar-brand {
+  font-size: 2em;
+}
 
 .navbar-brand.navbar-brand {
-  color: white;
+  color: black;
 }
 
 .navbar-brand.navbar-brand span {
-  color: lightslategray;
+  color: rgb(75, 160, 181);
 }
 
+.forcast-cards {
+  box-shadow: 0 0 16px;
+}
 
+.card-header {
+  font-size: 1.5em;
+}

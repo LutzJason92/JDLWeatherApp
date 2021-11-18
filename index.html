@@ -18,12 +18,13 @@
           <a class="navbar-brand" href="#"><span>JDL</span>Weather<span>App</span></a> 
             <form class="form-inline">
               <input
-               class="form-control mr-sm-0"
+               class="form-control my-4 mr-sm-1"
                 type="search"
                  placeholder="Search for City"
-                  aria-label="Search"/>
+                  aria-label="Search"
+                    id="searchField"/>
 
-                <button class="btn btn-outline-dark bg-success my-0 my-sm-1" type="submit">
+                <button class="btn btn-outline-dark bg-info mx-1 my-1 my-sm-1 searchButton" type="submit" id="fetchCity">
                   Search
                 </button>
             </form>
@@ -31,29 +32,34 @@
       </div>
     <todaysforcast>
       <div class="container">
-        <!-- row for both tiles -->
+        <!-- row for todasy forcast and history tiles -->
         <div class="row">
           <div class="col-9" >
-            <div class="card border-success mb-5" style="height: auto">
-              <div class="card-header bg-transparent border-success" style="text-align: center;">TODAY <span id="dateEl">(SPAN id dateEl MMMM, Do )</span> THE WEATHER IN <span id="cityEl">(SPAN id cityEl CITY NAME) </span> IS CURRENTLY:</div>
-              <div style="text-align: center;" class="card-body text-success">
-                <a class="card-title">ICON PLACE HOLDER</a>
+            <div class="card border-dark mb-5 forcast-cards" style="height: auto">
+              <div class="card-header bg-transparent border-dark" style="text-align: center;">
+                  <span id="dateEl"></span><span id="cityEl"></span> IS CURRENTLY</div>
+              
+              
+                <div style="text-align: center;" class="card-body text-dark">
+
                 <div class="row" style="justify-content: space-around;">
-                  <div class="col-3">
+                  <div class="col-4">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">TEMPURATURE</li>
                   <li class="list-group-item">WIND SPEED</li>
                   <li class="list-group-item">HUMIDITY</li>
-                  <li class="list-group-item">CHANCE OF RAIN</li> 
+
                 </ul>
               </div>
-              <!-- next col within tile -->
-              <div class="col-3" style="height: fit-content;">
+              <!-- next col within card -->
+              <div class="col-4" style="height: fit-content;">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">TEMPURATURE</li>
-                  <li class="list-group-item">WIND SPEED</li>
-                  <li class="list-group-item">HUMIDITY</li>
-                  <li class="list-group-item">CHANCE OF RAIN</li> 
+                  <li class="list-group-item">
+                    <!-- <img src="_____"> </img> -->
+                      </li>
+                  <li class="list-group-item">CHANCE OF RAIN</li>
+                  <li class="list-group-item" id="uVindex">UV INDEX</li>
+                  
                 </ul>
               </div>
               </div>
@@ -62,13 +68,15 @@
           </div>
           <!-- Search History -->
           <div class="col-3">
-              <div class="card border-success mb-3" style="height: auto">
-                <div class="card-header bg-transparent border-success" style="text-align: center;">Search History</div>
-                <div class="card-body text-success">
-                  <h5 class="card-title">Success card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card border-dark mb-3" style="height: auto">
+                <div class="card-header bg-transparent border-dark" style="text-align: center;">Search History</div>
+                <div class="card-body text-dark" style="text-align: center;">
+                  <h6 class="card-title">Revisit a past City</h6>
+                  <ul class="list-group list-group-flush searchHistory">
+                    
+                  </ul>
                 </div>
-                <button class="btn btn-outline-dark bg-success my-0 my-sm-1" type="submit">
+                <button class="btn btn-outline-dark bg-info mx-1 my-1 my-sm-1" type="submit">
                   Clear History
                 </button>
               </div>
@@ -82,10 +90,10 @@
         <div class="row" style="justify-content: space-around;">
           <!-- day +1 card -->
             <div class="col-2">
-              <div class="card" style="width: 10rem;">
-                <img class="card-img-top" src="..." alt="WEATHER ICON">
+              <div class="card forcast-cards" >
+                <img class="card-img-top" src="..." alt="WEATHER ICONDAY1">
                 <div class="card-body">
-                  <h5 class="card-title">DATE +1</h5>
+                  <h5 class="card-title" style="text-align: center;">DATE +1</h5>
                   <p class="card-text">Forcast shows:</p>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -98,10 +106,10 @@
             </div>
           <!-- Day +2 Card -->
             <div class="col-2">
-              <div class="card" style="width: 10rem;">
+              <div class="card forcast-cards" style="width: 10rem;">
                 <img class="card-img-top" src="..." alt="WEATHER ICON">
                 <div class="card-body">
-                  <h5 class="card-title">DATE +2</h5>
+                  <h5 class="card-title" style="text-align: center;">DATE +2</h5>
                   <p class="card-text">Forcast shows:</p>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -114,10 +122,10 @@
             </div>
           <!-- Day +3 Card -->
               <div class="col-2">
-                <div class="card" style="width: 10rem;">
+                <div class="card forcast-cards" style="width: 10rem;">
                   <img class="card-img-top" src="..." alt="WEATHER ICON">
                   <div class="card-body">
-                    <h5 class="card-title">DATE +3</h5>
+                    <h5 class="card-title" style="text-align: center;">DATE +3</h5>
                     <p class="card-text">Forcast shows:</p>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -130,10 +138,10 @@
               </div>
         <!-- Day +4 Card -->
               <div class="col-2">
-                <div class="card" style="width: 10rem;">
+                <div class="card forcast-cards" style="width: 10rem;">
                   <img class="card-img-top" src="..." alt="WEATHER ICON">
                   <div class="card-body">
-                    <h5 class="card-title">DATE +4</h5>
+                    <h5 class="card-title" style="text-align: center;">DATE +4</h5>
                     <p class="card-text">Forcast shows:</p>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -146,10 +154,10 @@
               </div>
         <!-- Day +5 Card -->
               <div class="col-2">
-                <div class="card" style="width: 10rem;">
+                <div class="card forcast-cards" style="width: 10rem;">
                   <img class="card-img-top" src="..." alt="WEATHER ICON">
                   <div class="card-body">
-                    <h5 class="card-title">DATE +5</h5>
+                    <h5 class="card-title" style="text-align: center;">DATE +5</h5>
                     <p class="card-text">Forcast shows:</p>
                   </div>
                   <ul class="list-group list-group-flush">

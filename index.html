@@ -14,7 +14,7 @@
   <body>
     <!-- nav bar elements  -->
       <div class="container">
-        <nav class="navbar navbar-light bg-transparent">
+        <nav class="navbar navbar-light bg-transparent justify-content-between">
           <a class="navbar-brand" href="#"><span>JDL</span>Weather<span>App</span></a> 
             <form class="form-inline">
               <input
@@ -79,7 +79,6 @@
     <!-- 5 day forecast  section-->
     <fiveDayforcast>
       <div class="container">
-        <h3> Next Five Day Forcast</h3>
         <div class="row" style="justify-content: space-around;">
           <!-- day +1 card -->
             <div class="col-2">
@@ -165,8 +164,11 @@
             </div>
       </div>
       </fiveDaysforcast>
-    <footer style="text-align: center;">
-      <h4><span>JDL</span>Weather<span>App</span></a></h4>
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-transparent text-white-50">
+      <div class="container text-center bg-transparent">
+        <small>JDLWeatherApp</small>
+      </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

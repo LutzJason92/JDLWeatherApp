@@ -13,14 +13,10 @@ body {
   color: rgb(75, 160, 181);
 }
 
-.forcast-cards {
+.forecast-cards {
   box-shadow: 0 0 16px;
 }
 
 .card-header {
   font-size: 1.5em;
-}
-
-span {
-  text-shadow: 0 0 0 1px black;
 }

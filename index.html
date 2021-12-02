@@ -1,177 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>JDLWeatherApp</title>
-  </head>
-  <body>
-    <!-- nav bar elements  -->
-      <div class="container">
-        <nav class="navbar navbar-light bg-transparent justify-content-between">
-          <a class="navbar-brand" href="#"><span>JDL</span>Weather<span>App</span></a> 
-            <form class="form-inline">
-              <input
-               class="form-control my-4 mr-sm-1"
-                type="search"
-                 placeholder="Search for City"
-                  aria-label="Search"
-                    id="searchField"/>
 
-                <button class="btn btn-outline-dark bg-info mx-1 my-1 my-sm-1 searchButton" type="submit" id="fetchCity">
-                  Search
-                </button>
-            </form>
-        </nav>
-      </div>
-    <todaysforecast>
-      <div class="container">
-        <!-- row for todasy forecast and history tiles -->
-        <div class="row">
-          <div class="col-9" >
-            <div class="card border-dark mb-5 forecast-cards" style="height: auto">
-              <div class="card-header bg-transparent border-dark" style="text-align: center;">
-                  <span id="dateEl"></span><span id="cityEl"></span> IS CURRENTLY</div>
-              
-              
-                <div style="text-align: center;" class="card-body text-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>JDLWeatherApp</title>
+</head>
 
-                <div class="row" style="justify-content: space-around;">
-                  <div class="col-4">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">TEMPURATURE</li>
-                  <li class="list-group-item">WIND SPEED</li>
-                  <li class="list-group-item">HUMIDITY</li>
+<body>
+  <!-- nav bar elements  -->
+  <div class="container">
+    <nav class="navbar navbar-light bg-transparent justify-content-between">
+      <a class="navbar-brand" href="#"><span>JDL</span>Weather<span>App</span></a>
+      <form class="form-inline">
+        <input class="form-control my-4 mr-sm-1" type="search" placeholder="Search for City" aria-label="Search"
+          id="searchField" />
 
-                </ul>
-              </div>
-              <!-- next col within card -->
-              <div class="col-4" style="height: fit-content;">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <img src="_____"> </img>
-                      </li>
-                  <li class="list-group-item">CHANCE OF RAIN</li>
-                  <li class="list-group-item" id="uVindex">UV INDEX</li>
-                  
-                </ul>
-              </div>
-              </div>
-              </div>
+        <button class="btn btn-outline-dark bg-info mx-1 my-1 my-sm-1 searchButton" type="submit" id="fetchCity">
+          Search
+        </button>
+      </form>
+    </nav>
+  </div>
+  <todaysforecast>
+    <div class="container">
+      <!-- row for todasy forecast and history tiles -->
+      <div class="row">
+        <div class="col-9">
+          <div class="card border-dark mb-5 forecast-cards" style="height: auto">
+            <div class="card-header bg-transparent border-dark" style="text-align: center;">
+              <span id="dateEl"></span><span id="cityEl"></span> IS CURRENTLY
             </div>
-          </div>
-          <!-- Search History -->
-          <div class="col-3">
-              <div class="card border-dark mb-3" style="height: auto">
-                <div class="card-header bg-transparent border-dark" style="text-align: center;">Search History</div>
-                <div class="card-body text-dark" style="text-align: center;">
-                  <h6 class="card-title">Revisit a past City</h6>
-                  <ul class="list-group list-group-flush searchHistory">
-                    
+
+
+            <div style="text-align: center;" class="card-body text-dark">
+
+              <div class="row" style="justify-content: space-around;">
+                <div class="col-4">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">TEMPURATURE</li>
+                    <li class="list-group-item">WIND SPEED</li>
+                    <li class="list-group-item">HUMIDITY</li>
+
                   </ul>
                 </div>
-                <button class="btn btn-outline-dark bg-info mx-1 my-1 my-sm-1" type="submit">
-                  Clear History
-                </button>
+                <!-- next col within card -->
+                <div class="col-4" style="height: fit-content;">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <img src="_____"> </img>
+                    </li>
+                    <li class="list-group-item">CHANCE OF RAIN</li>
+                    <li class="list-group-item" id="uVindex">UV INDEX</li>
+
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-    </todaysforecast>
-    <!-- 5 day forecast  section-->
-    <fiveDayforecast>
-      <div class="container">
-        <div class="row" style="justify-content: space-around;">
-          <!-- day +1 card -->
-            <div class="col-2">
-              <div class="card forecast-cards" >
-                <img class="card-img-top" src="..." alt="WEATHER ICON1">
-                <div class="card-body">
-                  <h5 class="card-title" style="text-align: center;">DATE +1</h5>
-                  <p class="card-text">forecast shows:</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">TEMPURATURE</li>
-                  <li class="list-group-item">WIND SPEED</li>
-                  <li class="list-group-item">HUMIDITY</li>
-                  <li class="list-group-item">CHANCE OF RAIN</li> 
-                </ul>
-              </div>
+        <!-- Search History -->
+        <div class="col-3">
+          <div class="card border-dark mb-3" style="height: auto">
+            <div class="card-header bg-transparent border-dark" style="text-align: center;">Search History</div>
+            <div class="card-body text-dark" style="text-align: center;">
+              <h6 class="card-title">Revisit a past City</h6>
+              <ul class="list-group list-group-flush searchHistory">
+
+              </ul>
             </div>
-          <!-- Day +2 Card -->
-            <div class="col-2">
-              <div class="card forecast-cards" style="width: 10rem;">
-                <img class="card-img-top" src="..." alt="WEATHER ICON2">
-                <div class="card-body">
-                  <h5 class="card-title" style="text-align: center;">DATE +2</h5>
-                  <p class="card-text">forecast shows:</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">TEMPURATURE</li>
-                  <li class="list-group-item">WIND SPEED</li>
-                  <li class="list-group-item">HUMIDITY</li>
-                  <li class="list-group-item">CHANCE OF RAIN</li> 
-                </ul>
-              </div>
-            </div>
-          <!-- Day +3 Card -->
-              <div class="col-2">
-                <div class="card forecast-cards" style="width: 10rem;">
-                  <img class="card-img-top" src="..." alt="WEATHER ICON3">
-                  <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">DATE +3</h5>
-                    <p class="card-text">forecast shows:</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">TEMPURATURE</li>
-                    <li class="list-group-item">WIND SPEED</li>
-                    <li class="list-group-item">HUMIDITY</li>
-                    <li class="list-group-item">CHANCE OF RAIN</li> 
-                  </ul>
-                </div>
-              </div>
-        <!-- Day +4 Card -->
-              <div class="col-2">
-                <div class="card forecast-cards" style="width: 10rem;">
-                  <img class="card-img-top" src="..." alt="WEATHER ICON4">
-                  <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">DATE +4</h5>
-                    <p class="card-text">forecast shows:</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">TEMPURATURE</li>
-                    <li class="list-group-item">WIND SPEED</li>
-                    <li class="list-group-item">HUMIDITY</li>
-                    <li class="list-group-item">CHANCE OF RAIN</li> 
-                  </ul>
-                </div>
-              </div>
-        <!-- Day +5 Card -->
-              <div class="col-2">
-                <div class="card forecast-cards" style="width: 10rem;">
-                  <img class="card-img-top" src="..." alt="WEATHER ICON5">
-                  <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">DATE +5</h5>
-                    <p class="card-text">forecast shows:</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">TEMPURATURE</li>
-                    <li class="list-group-item">WIND SPEED</li>
-                    <li class="list-group-item">HUMIDITY</li>
-                    <li class="list-group-item">CHANCE OF RAIN</li> 
-                  </ul>
-                </div>
-              </div>
-              
-            </div>
+            <button class="btn btn-outline-dark bg-info mx-1 my-1 my-sm-1" type="submit">
+              Clear History
+            </button>
+          </div>
+        </div>
       </div>
-      </fiveDaysforecast>
+    </div>
+  </todaysforecast>
+  <!-- 5 day forecast  section-->
+  <fiveDayforecast>
+    <div class="container">
+      <div class="row" style="justify-content: space-around;">
+        <!-- day +1 card -->
+        <div class="col-2">
+          <div class="card forecast-cards" style="width: 10rem;">
+            <img class="card-img-top" src="..." alt="WEATHER ICON1">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">DATE +1</h5>
+              <p class="card-text">forecast shows:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">TEMPURATURE</li>
+              <li class="list-group-item">WIND SPEED</li>
+              <li class="list-group-item">HUMIDITY</li>
+              <li class="list-group-item">CHANCE OF RAIN</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Day +2 Card -->
+        <div class="col-2">
+          <div class="card forecast-cards" style="width: 10rem;">
+            <img class="card-img-top" src="..." alt="WEATHER ICON2">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">DATE +2</h5>
+              <p class="card-text">forecast shows:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">TEMPURATURE</li>
+              <li class="list-group-item">WIND SPEED</li>
+              <li class="list-group-item">HUMIDITY</li>
+              <li class="list-group-item">CHANCE OF RAIN</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Day +3 Card -->
+        <div class="col-2">
+          <div class="card forecast-cards" style="width: 10rem;">
+            <img class="card-img-top" src="..." alt="WEATHER ICON3">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">DATE +3</h5>
+              <p class="card-text">forecast shows:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">TEMPURATURE</li>
+              <li class="list-group-item">WIND SPEED</li>
+              <li class="list-group-item">HUMIDITY</li>
+              <li class="list-group-item">CHANCE OF RAIN</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Day +4 Card -->
+        <div class="col-2">
+          <div class="card forecast-cards" style="width: 10rem;">
+            <img class="card-img-top" src="..." alt="WEATHER ICON4">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">DATE +4</h5>
+              <p class="card-text">forecast shows:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">TEMPURATURE</li>
+              <li class="list-group-item">WIND SPEED</li>
+              <li class="list-group-item">HUMIDITY</li>
+              <li class="list-group-item">CHANCE OF RAIN</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Day +5 Card -->
+        <div class="col-2">
+          <div class="card forecast-cards" style="width: 10rem;">
+            <img class="card-img-top" src="..." alt="WEATHER ICON5">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">DATE +5</h5>
+              <p class="card-text">forecast shows:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">TEMPURATURE</li>
+              <li class="list-group-item">WIND SPEED</li>
+              <li class="list-group-item">HUMIDITY</li>
+              <li class="list-group-item">CHANCE OF RAIN</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </fiveDaysforecast>
 
     <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-transparent text-white-50">
       <div class="container text-center bg-transparent">
@@ -180,12 +176,10 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
       integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>

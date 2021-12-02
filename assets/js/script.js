@@ -4,7 +4,7 @@ $("#dateEl").text("Today is " + currentTimeDateEl + ". The weather in ");
 
 function getApi(cityName) {
   console.log(cityName);
-  var APIkey = "a2b5590f2ab8007b0bdbeb2adbb4cc35";
+  var APIkey = "a2b5590f2ab8007b0bdbeb2adbb4cc35"
   var requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIkey}`;
 
   // Fetch() API retrive data from thrid party apis
